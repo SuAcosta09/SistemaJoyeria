@@ -47,9 +47,9 @@
             this.lbl_tit = new System.Windows.Forms.Label();
             this.currentIcon = new FontAwesome.Sharp.IconPictureBox();
             this.panel_primary = new System.Windows.Forms.Panel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.lbl_hora = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.pnl_menu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -366,6 +366,28 @@
             this.panel_primary.TabIndex = 2;
             this.panel_primary.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_primary_Paint);
             // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.Font = new System.Drawing.Font("Segoe UI Emoji", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.Location = new System.Drawing.Point(455, 523);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(187, 53);
+            this.lbl_fecha.TabIndex = 2;
+            this.lbl_fecha.Text = "00/00/00";
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.Font = new System.Drawing.Font("Segoe UI Emoji", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Location = new System.Drawing.Point(411, 81);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(282, 69);
+            this.lbl_hora.TabIndex = 1;
+            this.lbl_hora.Text = "7:50:51 PM";
+            // 
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
@@ -383,28 +405,6 @@
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // lbl_hora
-            // 
-            this.lbl_hora.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_hora.AutoSize = true;
-            this.lbl_hora.Font = new System.Drawing.Font("Segoe UI Emoji", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.Location = new System.Drawing.Point(411, 81);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(282, 69);
-            this.lbl_hora.TabIndex = 1;
-            this.lbl_hora.Text = "7:50:51 PM";
-            // 
-            // lbl_fecha
-            // 
-            this.lbl_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.Font = new System.Drawing.Font("Segoe UI Emoji", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.Location = new System.Drawing.Point(455, 523);
-            this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(187, 53);
-            this.lbl_fecha.TabIndex = 2;
-            this.lbl_fecha.Text = "00/00/00";
-            // 
             // horafecha
             // 
             this.horafecha.Enabled = true;
@@ -419,6 +419,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_menu);
             this.Name = "pri_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnl_menu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_home)).EndInit();

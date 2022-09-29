@@ -142,8 +142,8 @@ namespace winformadvance
             {
                 if (ValidateEmail())
                 {
-                    if (MessageBox.Show("Seguro que desea eliminar al cliente?",
-                           "Eliminar Datos!",
+                    if (MessageBox.Show("Seguro que desea modificar al cliente?",
+                           "Modificar Datos!",
                            MessageBoxButtons.YesNo,
                            MessageBoxIcon.Question,
                            MessageBoxDefaultButton.Button1) == DialogResult.Yes)
