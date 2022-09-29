@@ -17,10 +17,7 @@ namespace winformadvance
             InitializeComponent();
         }
 
-        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
         {
@@ -59,7 +56,7 @@ namespace winformadvance
 
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                txt_preciovta.Focus();
+                txt_venta.Focus();
             }
         }
     }

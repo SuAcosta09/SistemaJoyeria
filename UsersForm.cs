@@ -166,29 +166,41 @@ namespace winformadvance
             {
                 if (ValidateEmail())
                 {
-                    string nombre, apellido, dni, email, tel, dir, usuario, nac, perfil;
 
-                    nombre = txt_nombre.Text;
-                    apellido = txt_apellido.Text;
-                    dni = txt_dni.Text;
-                    email = txt_email.Text;
-                    tel = txt_tel.Text;
-                    dir = txt_dir.Text;
-                    usuario = txt_usuario.Text;
-                    nac = cal_nacimiento.Text;
-                    perfil = combo_perfil.Text;
+                    if (MessageBox.Show("Seguro que desea eliminar al cliente?",
+                           "Eliminar Datos!",
+                           MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question,
+                           MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    {
+                        string nombre, apellido, dni, email, tel, dir, usuario, nac, perfil;
 
-                    dtg_usuarios[0, pos].Value = txt_nombre.Text;
-                    dtg_usuarios[1, pos].Value = txt_apellido.Text;
-                    dtg_usuarios[2, pos].Value = txt_dni.Text;
-                    dtg_usuarios[3, pos].Value = txt_email.Text;
-                    dtg_usuarios[4, pos].Value = txt_tel.Text;
-                    dtg_usuarios[5, pos].Value = txt_dir.Text;
-                    dtg_usuarios[6, pos].Value = txt_usuario.Text;
-                    dtg_usuarios[7, pos].Value = cal_nacimiento.Text;
-                    dtg_usuarios[8, pos].Value = combo_perfil.Text;
+                        nombre = txt_nombre.Text;
+                        apellido = txt_apellido.Text;
+                        dni = txt_dni.Text;
+                        email = txt_email.Text;
+                        tel = txt_tel.Text;
+                        dir = txt_dir.Text;
+                        usuario = txt_usuario.Text;
+                        nac = cal_nacimiento.Text;
+                        perfil = combo_perfil.Text;
 
-                    limpiar();
+                        dtg_usuarios[0, pos].Value = txt_nombre.Text;
+                        dtg_usuarios[1, pos].Value = txt_apellido.Text;
+                        dtg_usuarios[2, pos].Value = txt_dni.Text;
+                        dtg_usuarios[3, pos].Value = txt_email.Text;
+                        dtg_usuarios[4, pos].Value = txt_tel.Text;
+                        dtg_usuarios[5, pos].Value = txt_dir.Text;
+                        dtg_usuarios[6, pos].Value = txt_usuario.Text;
+                        dtg_usuarios[7, pos].Value = cal_nacimiento.Text;
+                        dtg_usuarios[8, pos].Value = combo_perfil.Text;
+
+                        limpiar();
+                    }
+                    else
+                    {
+                        limpiar();
+                    }
                 }
                 else
                 {
@@ -335,7 +347,5 @@ namespace winformadvance
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 txt_contra.Focus();
         }
-
-
     }
 }
