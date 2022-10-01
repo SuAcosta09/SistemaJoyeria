@@ -260,5 +260,66 @@ namespace winformadvance
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
+
+        private void bunifuLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_total_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                txt_dni.Focus();
+        }
+
+        private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                nombre_cliente.Focus();
+        }
+
+        private void nombre_cliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                txt_cod.Focus();
+        }
+
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                txt_nombre.Focus();
+        }
     }
 }
