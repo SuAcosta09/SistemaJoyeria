@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace winformadvance
 {
@@ -314,6 +316,30 @@ namespace winformadvance
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ClientForm_Load(object sender, EventArgs e)
+        {
+            List<Cliente> lista_cliente = new CN_cliente().ListarClientes();
+
+            foreach(Cliente cli in lista_cliente)
+            {
+                dtg_clientes.Rows.Add(new object[]
+                {
+                    cli.nombre,
+                    cli.apellido,
+                    cli.dni,
+                    cli.email,
+                    cli.tel,
+                    cli.direccion,
+                    cli.fecha_nacimiento
+                });
+            }
         }
     }
 }
