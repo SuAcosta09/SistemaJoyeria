@@ -30,15 +30,12 @@ namespace winformadvance
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(15, 80);
-            //pnl_menu.Controls.Add(leftBorderBtn);
 
             //form
             this.Text = String.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
         }
-
-
 
         //drag and move the window
 
@@ -85,10 +82,33 @@ namespace winformadvance
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            //HomeAdmin
-            pri_form pri_Form = new pri_form();
-            pri_Form.Show();
-            this.Hide();
+            if (txt_usuario.Text == "admin" && txt_contra.Text == "111")
+            {
+                pri_form pri_Form = new pri_form();
+                pri_Form.Show();
+                this.Hide();
+            }
+            else if (txt_usuario.Text == "vendedor" && txt_contra.Text == "222")
+            {
+                HomeVendedor pri_Form = new HomeVendedor();
+                pri_Form.Show();
+                this.Hide();
+            }else if (txt_usuario.Text == "gerente" && txt_contra.Text == "333")
+            {
+                HomeGerente pri_Form = new HomeGerente();
+                pri_Form.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o Contraseña incorrectas, intente de nuevo!", "ERROR!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                txt_contra.Clear();
+                txt_usuario.Clear();
+                txt_usuario.Focus();
+            }
         }
 
         private void exit_btn_Click_1(object sender, EventArgs e)

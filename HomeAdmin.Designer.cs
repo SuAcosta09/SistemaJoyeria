@@ -101,6 +101,7 @@
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btn_backup
             // 
@@ -364,7 +365,6 @@
             this.panel_primary.Name = "panel_primary";
             this.panel_primary.Size = new System.Drawing.Size(1100, 669);
             this.panel_primary.TabIndex = 2;
-            this.panel_primary.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_primary_Paint);
             // 
             // lbl_fecha
             // 

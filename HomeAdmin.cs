@@ -12,8 +12,6 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
-
-
 using Color = System.Drawing.Color;
 using System.Diagnostics.Tracing;
 
@@ -32,7 +30,6 @@ namespace winformadvance
             leftBorderBtn.Size = new Size(15, 80);
             pnl_menu.Controls.Add(leftBorderBtn);
 
-            //form
             this.Text = String.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -41,9 +38,8 @@ namespace winformadvance
         private void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
-            {
                 currentChildForm.Close();
-            }
+
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -108,7 +104,6 @@ namespace winformadvance
         private void btn_user_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBcolors.color1);
-            //lbl_tit.Text = btn_user.Text;
             openChildForm(new UsersForm());
         }
 
@@ -142,11 +137,7 @@ namespace winformadvance
             openChildForm(new BackupForm());
         }
 
-        private void btn_home_Click(object sender, EventArgs e)
-        {
-
-            Reset();
-        }
+        private void btn_home_Click(object sender, EventArgs e){ Reset(); }
 
         private void Reset()
         {
@@ -155,29 +146,12 @@ namespace winformadvance
             currentIcon.IconChar = IconChar.Home;
             currentIcon.BackColor = Color.FromArgb(132, 15, 18);
             lbl_tit.Text = "Home";
-
-            //try
-            //{
-            //    currentChildForm.Close();
-            //}
-            //catch(NullReferenceException e)
-            //{
-            //    return;
-            //}
-            
-
         }
-
-
-        //drag and move the window
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
-
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        
-
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
@@ -185,27 +159,17 @@ namespace winformadvance
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void exit_btn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        private void exit_btn_Click(object sender, EventArgs e){ Application.Exit(); }
 
         private void btn_maximize_Click(object sender, EventArgs e)
         {
             if(WindowState == FormWindowState.Normal)
-            {
                 WindowState = FormWindowState.Maximized;
-            }
             else
-            {
                 WindowState = FormWindowState.Normal;
-            }
         }
 
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-            WindowState=FormWindowState.Minimized;
-        }
+        private void btn_minimize_Click(object sender, EventArgs e){WindowState=FormWindowState.Minimized;}
 
         private void horafecha_Tick(object sender, EventArgs e)
         {
@@ -213,9 +177,19 @@ namespace winformadvance
             lbl_fecha.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void panel_primary_Paint(object sender, PaintEventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
 
+            if (MessageBox.Show("Seguro que desea cerrar sesión?",
+                            "Cerrar Sesión!",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question,
+                            MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                this.Close();
+                Login pri_Form = new Login();
+                pri_Form.Show();
+            }
         }
     }
 }

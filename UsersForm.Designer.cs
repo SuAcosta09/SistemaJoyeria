@@ -1053,7 +1053,6 @@
             this.dtg_usuarios.RowHeadersVisible = false;
             this.dtg_usuarios.RowHeadersWidth = 62;
             this.dtg_usuarios.RowTemplate.Height = 40;
-            this.dtg_usuarios.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dtg_usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_usuarios.Size = new System.Drawing.Size(845, 317);
             this.dtg_usuarios.TabIndex = 24;

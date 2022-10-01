@@ -166,3 +166,6 @@ C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\w
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.csproj.CopyComplete
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.exe
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.pdb
+C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\bin\Debug\LiveCharts.xml
+C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.HomeVendedor.resources
+C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.HomeGerente.resources
