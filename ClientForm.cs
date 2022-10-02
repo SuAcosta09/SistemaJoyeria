@@ -95,18 +95,51 @@ namespace winformadvance
                             MessageBoxIcon.Question,
                             MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
-                        string nombre, apellido, dni, email, tel, dir, nac;
+                        //string nombre, apellido, dni, email, tel, dir, nac;
 
-                        nombre = txt_nombre.Text;
-                        apellido = txt_apellido.Text;
-                        dni = txt_dni.Text;
-                        email = txt_email.Text;
-                        tel = txt_tel.Text;
-                        dir = txt_dir.Text;
-                        nac = cal_nacimiento.Text;
+                        //nombre = txt_nombre.Text;
+                        //apellido = txt_apellido.Text;
+                        //dni = txt_dni.Text;
+                        //email = txt_email.Text;
+                        //tel = txt_tel.Text;
+                        //dir = txt_dir.Text;
+                        //nac = cal_nacimiento.Text;
 
-                        dtg_clientes.Rows.Add(nombre, apellido, dni, email, tel, dir, nac);
-                        limpiar();
+                        //dtg_clientes.Rows.Add(nombre, apellido, dni, email, tel, dir, nac);
+
+                        string msj = string.Empty;
+
+                        Cliente objCliente = new Cliente()
+                        {
+                            nombre = txt_nombre.Text,
+                            apellido = txt_apellido.Text,
+                            dni = txt_dni.Text,
+                            email = txt_email.Text,
+                            tel = txt_tel.Text,
+                            direccion = txt_dir.Text,
+                            fecha_nacimiento = cal_nacimiento.Text
+                        };
+
+                        int id_cliente_generado = new CN_cliente().RegistrarCliente(objCliente, out msj);
+
+                        if(id_cliente_generado != 0)
+                        {
+                            dtg_clientes.Rows.Add(new object[]
+                            {
+                                txt_nombre.Text,
+                                txt_apellido.Text,
+                                txt_dni.Text,
+                                txt_email.Text,
+                                txt_tel.Text,
+                                txt_dir.Text,
+                                cal_nacimiento.Text
+                            });
+                            limpiar();
+                        }
+                        else
+                        {
+                            MessageBox.Show(msj);
+                        }
                     }
                     else
                     {
@@ -150,24 +183,16 @@ namespace winformadvance
                            MessageBoxIcon.Question,
                            MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
-                        string nombre, apellido, dni, email, tel, dir, nac;
-
-                        nombre = txt_nombre.Text;
-                        apellido = txt_apellido.Text;
-                        dni = txt_dni.Text;
-                        email = txt_email.Text;
-                        tel = txt_tel.Text;
-                        dir = txt_dir.Text;
-                        nac = cal_nacimiento.Text;
-
-                        dtg_clientes[0, pos].Value = txt_nombre.Text;
-                        dtg_clientes[1, pos].Value = txt_apellido.Text;
-                        dtg_clientes[2, pos].Value = txt_dni.Text;
-                        dtg_clientes[3, pos].Value = txt_email.Text;
-                        dtg_clientes[4, pos].Value = txt_tel.Text;
-                        dtg_clientes[5, pos].Value = txt_dir.Text;
-                        dtg_clientes[6, pos].Value = cal_nacimiento.Text;
-
+                        dtg_clientes.Rows.Add(new object[]
+                        {
+                            txt_nombre.Text,
+                            txt_apellido.Text,
+                            txt_dni.Text,
+                            txt_email.Text,
+                            txt_tel.Text,
+                            txt_dir.Text,
+                            cal_nacimiento.Text
+                        });
                         limpiar();
                     }
                     else
