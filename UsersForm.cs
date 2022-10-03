@@ -167,8 +167,8 @@ namespace winformadvance
                 if (ValidateEmail())
                 {
 
-                    if (MessageBox.Show("Seguro que desea eliminar al cliente?",
-                           "Eliminar Datos!",
+                    if (MessageBox.Show("Seguro que desea modificar al usuario?",
+                           "Modificar Datos!",
                            MessageBoxButtons.YesNo,
                            MessageBoxIcon.Question,
                            MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -221,7 +221,7 @@ namespace winformadvance
         /// <param name="e"></param>
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Seguro que desea eliminar al cliente?", "Eliminar Datos!", MessageBoxButtons.YesNo,
+            if (MessageBox.Show("Seguro que desea eliminar al usuario?", "Eliminar Datos!", MessageBoxButtons.YesNo,
                              MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 dtg_usuarios.Rows.RemoveAt(pos);

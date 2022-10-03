@@ -990,7 +990,7 @@
             this.dtg_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtg_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dtg_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_usuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtg_usuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(102)))), ((int)(((byte)(115)))));
             this.dtg_usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1065,7 +1065,6 @@
             this.name.MinimumWidth = 8;
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            this.name.Width = 138;
             // 
             // lastname
             // 
@@ -1073,7 +1072,6 @@
             this.lastname.MinimumWidth = 8;
             this.lastname.Name = "lastname";
             this.lastname.ReadOnly = true;
-            this.lastname.Width = 138;
             // 
             // dni
             // 
@@ -1081,7 +1079,6 @@
             this.dni.MinimumWidth = 8;
             this.dni.Name = "dni";
             this.dni.ReadOnly = true;
-            this.dni.Width = 91;
             // 
             // email
             // 
@@ -1089,7 +1086,6 @@
             this.email.MinimumWidth = 8;
             this.email.Name = "email";
             this.email.ReadOnly = true;
-            this.email.Width = 107;
             // 
             // tel
             // 
@@ -1097,7 +1093,6 @@
             this.tel.MinimumWidth = 8;
             this.tel.Name = "tel";
             this.tel.ReadOnly = true;
-            this.tel.Width = 79;
             // 
             // dir
             // 
@@ -1105,7 +1100,6 @@
             this.dir.MinimumWidth = 8;
             this.dir.Name = "dir";
             this.dir.ReadOnly = true;
-            this.dir.Width = 150;
             // 
             // user
             // 
@@ -1113,7 +1107,6 @@
             this.user.MinimumWidth = 8;
             this.user.Name = "user";
             this.user.ReadOnly = true;
-            this.user.Width = 132;
             // 
             // nac
             // 
@@ -1121,7 +1114,6 @@
             this.nac.MinimumWidth = 8;
             this.nac.Name = "nac";
             this.nac.ReadOnly = true;
-            this.nac.Width = 91;
             // 
             // perfil
             // 
@@ -1129,7 +1121,6 @@
             this.perfil.MinimumWidth = 8;
             this.perfil.Name = "perfil";
             this.perfil.ReadOnly = true;
-            this.perfil.Width = 105;
             // 
             // panel_buttons
             // 
