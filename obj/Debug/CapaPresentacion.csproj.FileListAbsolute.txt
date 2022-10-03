@@ -45,7 +45,6 @@ C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\w
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.pri_form.resources
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.Properties.Resources.resources
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.ClientForm.resources
-C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.ProductsForm.resources
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.BackupForm.resources
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.ReportesForm.resources
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.VentasForm.resources
@@ -57,3 +56,5 @@ C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\C
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.exe
 C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.pdb
+C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.FacturarForm.resources
+C:\Users\fernando.caballero\Desktop\Nueva carpeta (2)\SistemaJoyeria\obj\Debug\winformadvance.ProductForm.resources

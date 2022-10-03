@@ -132,7 +132,8 @@ namespace winformadvance
                                 txt_email.Text,
                                 txt_tel.Text,
                                 txt_dir.Text,
-                                cal_nacimiento.Text
+                                cal_nacimiento
+
                             });
                             limpiar();
                         }

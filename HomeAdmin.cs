@@ -116,7 +116,7 @@ namespace winformadvance
         private void btn_prod_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBcolors.color3);
-            openChildForm(new ProductsForm());
+            openChildForm(new ProductForm());
         }
 
         private void btn_ventas_Click(object sender, EventArgs e)

@@ -756,7 +756,7 @@
             this.dtg_clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtg_clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtg_clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtg_clientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(102)))), ((int)(((byte)(115)))));
             this.dtg_clientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_clientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -827,6 +827,7 @@
             this.name.MinimumWidth = 8;
             this.name.Name = "name";
             this.name.ReadOnly = true;
+            this.name.Width = 138;
             // 
             // lastname
             // 
@@ -834,6 +835,7 @@
             this.lastname.MinimumWidth = 8;
             this.lastname.Name = "lastname";
             this.lastname.ReadOnly = true;
+            this.lastname.Width = 138;
             // 
             // dni
             // 
@@ -841,6 +843,7 @@
             this.dni.MinimumWidth = 8;
             this.dni.Name = "dni";
             this.dni.ReadOnly = true;
+            this.dni.Width = 91;
             // 
             // email
             // 
@@ -848,6 +851,7 @@
             this.email.MinimumWidth = 8;
             this.email.Name = "email";
             this.email.ReadOnly = true;
+            this.email.Width = 107;
             // 
             // tel
             // 
@@ -855,6 +859,7 @@
             this.tel.MinimumWidth = 8;
             this.tel.Name = "tel";
             this.tel.ReadOnly = true;
+            this.tel.Width = 79;
             // 
             // dir
             // 
@@ -862,6 +867,7 @@
             this.dir.MinimumWidth = 8;
             this.dir.Name = "dir";
             this.dir.ReadOnly = true;
+            this.dir.Width = 150;
             // 
             // nac
             // 
@@ -869,6 +875,7 @@
             this.nac.MinimumWidth = 8;
             this.nac.Name = "nac";
             this.nac.ReadOnly = true;
+            this.nac.Width = 167;
             // 
             // panel_buttons
             // 
