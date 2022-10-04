@@ -89,23 +89,12 @@ namespace winformadvance
             {
                 if (ValidateEmail())
                 {
-                    if (MessageBox.Show("Seguro que desea eliminar al cliente?",
-                            "Eliminar Datos!",
+                    if (MessageBox.Show("Seguro que desea guardar al cliente?",
+                            "Guardar Datos!",
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question,
                             MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
-                        //string nombre, apellido, dni, email, tel, dir, nac;
-
-                        //nombre = txt_nombre.Text;
-                        //apellido = txt_apellido.Text;
-                        //dni = txt_dni.Text;
-                        //email = txt_email.Text;
-                        //tel = txt_tel.Text;
-                        //dir = txt_dir.Text;
-                        //nac = cal_nacimiento.Text;
-
-                        //dtg_clientes.Rows.Add(nombre, apellido, dni, email, tel, dir, nac);
 
                         string msj = string.Empty;
 
@@ -117,7 +106,7 @@ namespace winformadvance
                             email = txt_email.Text,
                             tel = txt_tel.Text,
                             direccion = txt_dir.Text,
-                            fecha_nacimiento = cal_nacimiento.Text
+                            fecha_nacimiento = cal_nacimiento.Text,
                         };
 
                         int id_cliente_generado = new CN_cliente().RegistrarCliente(objCliente, out msj);
@@ -132,8 +121,7 @@ namespace winformadvance
                                 txt_email.Text,
                                 txt_tel.Text,
                                 txt_dir.Text,
-                                cal_nacimiento
-
+                                cal_nacimiento.Text,
                             });
                             limpiar();
                         }
@@ -149,7 +137,7 @@ namespace winformadvance
                 }
                 else
                 {
-                    MessageBox.Show("Formato de correo no valido! intente de nuevo", "ERROR!",
+                    MessageBox.Show("Formato de correo no válido! intente de nuevo", "ERROR!",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                     txt_email.Clear();
@@ -167,49 +155,49 @@ namespace winformadvance
         /// <param name="e"></param>
         private void btn_modif_Click(object sender, EventArgs e)
         {
-            if (txt_nombre.Text == "" || txt_apellido.Text == "" || txt_dni.Text == "" ||
-                txt_email.Text == "" || txt_tel.Text == "" || txt_dir.Text == "")
-            {
-                MessageBox.Show("Debe completar todos los campos!", "ERROR!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (ValidateEmail())
-                {
-                    if (MessageBox.Show("Seguro que desea modificar al cliente?",
-                           "Modificar Datos!",
-                           MessageBoxButtons.YesNo,
-                           MessageBoxIcon.Question,
-                           MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                    {
-                        dtg_clientes.Rows.Add(new object[]
-                        {
-                            txt_nombre.Text,
-                            txt_apellido.Text,
-                            txt_dni.Text,
-                            txt_email.Text,
-                            txt_tel.Text,
-                            txt_dir.Text,
-                            cal_nacimiento.Text
-                        });
-                        limpiar();
-                    }
-                    else
-                    {
-                        limpiar();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Formato de correo no valido! intente de nuevo", "ERROR!",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                    txt_email.Clear();
-                    txt_email.Focus();
-                }
-            }
+            //if (txt_nombre.Text == "" || txt_apellido.Text == "" || txt_dni.Text == "" ||
+            //    txt_email.Text == "" || txt_tel.Text == "" || txt_dir.Text == "")
+            //{
+            //    MessageBox.Show("Debe completar todos los campos!", "ERROR!",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Error);
+            //}
+            //else
+            //{
+            //    if (ValidateEmail())
+            //    {
+            //        if (MessageBox.Show("Seguro que desea modificar al cliente?",
+            //               "Modificar Datos!",
+            //               MessageBoxButtons.YesNo,
+            //               MessageBoxIcon.Question,
+            //               MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            //        {
+            //            dtg_clientes.Rows.Add(new object[]
+            //            {
+            //                txt_nombre.Text,
+            //                txt_apellido.Text,
+            //                txt_dni.Text,
+            //                txt_email.Text,
+            //                txt_tel.Text,
+            //                txt_dir.Text,
+            //                cal_nacimiento.Text
+            //            });
+            //            limpiar();
+            //        }
+            //        else
+            //        {
+            //            limpiar();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Formato de correo no valido! intente de nuevo", "ERROR!",
+            //            MessageBoxButtons.OK,
+            //            MessageBoxIcon.Error);
+            //        txt_email.Clear();
+            //        txt_email.Focus();
+            //    }
+            //}
         }
 
         /// <summary>
@@ -220,16 +208,16 @@ namespace winformadvance
         /// <param name="e"></param>
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Seguro que desea eliminar al cliente?", "Eliminar Datos!", MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-            {
-                dtg_clientes.Rows.RemoveAt(pos);
-                limpiar();
-            }
-            else
-            {
-                limpiar();
-            }
+            //if (MessageBox.Show("Seguro que desea eliminar al cliente?", "Eliminar Datos!", MessageBoxButtons.YesNo,
+            //     MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            //{
+            //    dtg_clientes.Rows.RemoveAt(pos);
+            //    limpiar();
+            //}
+            //else
+            //{
+            //    limpiar();
+            //}
         }
 
         /// <summary>

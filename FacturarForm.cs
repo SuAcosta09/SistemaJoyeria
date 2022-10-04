@@ -56,7 +56,7 @@ namespace winformadvance
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             if (txt_cod.Text == "" || txt_nombre.Text == "" || txt_venta.Text == "" ||
-                txt_stock.Text == "")//txt_compra.Text == "" || 
+                txt_stock.Text == "")
             {
                 MessageBox.Show("Debe completar todos los campos!", "ERROR!",
                     MessageBoxButtons.OK,
@@ -70,17 +70,17 @@ namespace winformadvance
                             MessageBoxIcon.Question,
                             MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    string cod, nombre, venta, gen, marca, stock;//, compra;
+                    //string cod, nombre, venta, gen, marca, stock;//, compra;
 
-                    cod = txt_cod.Text;
-                    nombre = txt_nombre.Text;
-                    venta = txt_venta.Text;
-                    //compra = txt_compra.Text;
-                    gen = combo_genero.Text;
-                    marca = combo_marca.Text;
-                    stock = txt_stock.Text;
+                    //cod = txt_cod.Text;
+                    //nombre = txt_nombre.Text;
+                    //venta = txt_venta.Text;
+                    ////compra = txt_compra.Text;
+                    //gen = combo_genero.Text;
+                    //marca = combo_marca.Text;
+                    //stock = txt_stock.Text;
 
-                    dtg_prod.Rows.Add(cod, nombre, venta, gen, marca, stock); //,compra
+                    //dtg_prod.Rows.Add(cod, nombre, venta, gen, marca, stock); //,compra
                     limpiar();
                 }
                 else
@@ -227,9 +227,6 @@ namespace winformadvance
 
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
                 e.Handled = true;
-
-            //if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            //    txt_compra.Focus();
         }
 
         /// <summary>
@@ -286,40 +283,46 @@ namespace winformadvance
 
         }
 
-        private void txt_total_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
-
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                txt_dni.Focus();
-        }
 
         private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
-
-            //if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            //    nombre_cliente.Focus();
         }
 
         private void nombre_cliente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
-
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                txt_cod.Focus();
         }
 
         private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
+        }
 
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                txt_nombre.Focus();
+        private void txt_total_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+                e.Handled = true;
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+                e.Handled = true;
+        }
+
+        private void txt_tot_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+                e.Handled = true;
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+                e.Handled = true;
+        }
+
+        private void ttotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

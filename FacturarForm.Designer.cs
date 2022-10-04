@@ -57,13 +57,13 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.txt_nombre = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -85,7 +85,6 @@
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.txt_total = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnfactura = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -107,6 +106,7 @@
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_modif = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
+            this.txt_tot = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel2.SuspendLayout();
             this.bunifuGroupBox3.SuspendLayout();
             this.bunifuGroupBox2.SuspendLayout();
@@ -180,7 +180,7 @@
             this.txt_nombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_nombre.Lines = new string[0];
             this.txt_nombre.Location = new System.Drawing.Point(9, 189);
-            this.txt_nombre.MaxLength = 8;
+            this.txt_nombre.MaxLength = 100;
             this.txt_nombre.MinimumSize = new System.Drawing.Size(2, 2);
             this.txt_nombre.Modified = false;
             this.txt_nombre.Multiline = false;
@@ -474,7 +474,7 @@
             this.txt_stock.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_stock.Lines = new string[0];
             this.txt_stock.Location = new System.Drawing.Point(213, 186);
-            this.txt_stock.MaxLength = 8;
+            this.txt_stock.MaxLength = 100;
             this.txt_stock.MinimumSize = new System.Drawing.Size(2, 2);
             this.txt_stock.Modified = false;
             this.txt_stock.Multiline = false;
@@ -551,7 +551,7 @@
             this.txt_venta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_venta.Lines = new string[0];
             this.txt_venta.Location = new System.Drawing.Point(213, 63);
-            this.txt_venta.MaxLength = 8;
+            this.txt_venta.MaxLength = 100;
             this.txt_venta.MinimumSize = new System.Drawing.Size(2, 2);
             this.txt_venta.Modified = false;
             this.txt_venta.Multiline = false;
@@ -628,7 +628,7 @@
             this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox3.Lines = new string[0];
             this.bunifuTextBox3.Location = new System.Drawing.Point(7, 189);
-            this.bunifuTextBox3.MaxLength = 8;
+            this.bunifuTextBox3.MaxLength = 100;
             this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(2, 2);
             this.bunifuTextBox3.Modified = false;
             this.bunifuTextBox3.Multiline = false;
@@ -705,7 +705,7 @@
             this.txt_cod.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_cod.Lines = new string[0];
             this.txt_cod.Location = new System.Drawing.Point(18, 63);
-            this.txt_cod.MaxLength = 8;
+            this.txt_cod.MaxLength = 100;
             this.txt_cod.MinimumSize = new System.Drawing.Size(2, 2);
             this.txt_cod.Modified = false;
             this.txt_cod.Multiline = false;
@@ -938,8 +938,8 @@
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.White;
             this.bunifuGroupBox1.BorderRadius = 1;
             this.bunifuGroupBox1.BorderThickness = 1;
+            this.bunifuGroupBox1.Controls.Add(this.txt_tot);
             this.bunifuGroupBox1.Controls.Add(this.bunifuLabel7);
-            this.bunifuGroupBox1.Controls.Add(this.txt_total);
             this.bunifuGroupBox1.Controls.Add(this.btnfactura);
             this.bunifuGroupBox1.Controls.Add(this.bunifuLabel6);
             this.bunifuGroupBox1.Controls.Add(this.bunifuDatePicker1);
@@ -972,83 +972,6 @@
             this.bunifuLabel7.Text = "Total";
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // txt_total
-            // 
-            this.txt_total.AcceptsReturn = false;
-            this.txt_total.AcceptsTab = false;
-            this.txt_total.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_total.AnimationSpeed = 200;
-            this.txt_total.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_total.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_total.AutoSizeHeight = true;
-            this.txt_total.BackColor = System.Drawing.Color.White;
-            this.txt_total.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_total.BackgroundImage")));
-            this.txt_total.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_total.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_total.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_total.BorderColorIdle = System.Drawing.Color.Red;
-            this.txt_total.BorderRadius = 1;
-            this.txt_total.BorderThickness = 3;
-            this.txt_total.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_total.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_total.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_total.DefaultText = "";
-            this.txt_total.FillColor = System.Drawing.Color.White;
-            this.txt_total.ForeColor = System.Drawing.Color.Black;
-            this.txt_total.HideSelection = true;
-            this.txt_total.IconLeft = null;
-            this.txt_total.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_total.IconPadding = 10;
-            this.txt_total.IconRight = null;
-            this.txt_total.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_total.Lines = new string[0];
-            this.txt_total.Location = new System.Drawing.Point(7, 192);
-            this.txt_total.MaxLength = 8;
-            this.txt_total.MinimumSize = new System.Drawing.Size(2, 2);
-            this.txt_total.Modified = false;
-            this.txt_total.Multiline = false;
-            this.txt_total.Name = "txt_total";
-            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties29.FillColor = System.Drawing.Color.Empty;
-            stateProperties29.ForeColor = System.Drawing.Color.Empty;
-            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_total.OnActiveState = stateProperties29;
-            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_total.OnDisabledState = stateProperties30;
-            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties31.FillColor = System.Drawing.Color.Empty;
-            stateProperties31.ForeColor = System.Drawing.Color.Empty;
-            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_total.OnHoverState = stateProperties31;
-            stateProperties32.BorderColor = System.Drawing.Color.Red;
-            stateProperties32.FillColor = System.Drawing.Color.White;
-            stateProperties32.ForeColor = System.Drawing.Color.Black;
-            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_total.OnIdleState = stateProperties32;
-            this.txt_total.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_total.PasswordChar = '\0';
-            this.txt_total.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txt_total.PlaceholderText = "Total";
-            this.txt_total.ReadOnly = false;
-            this.txt_total.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_total.SelectedText = "";
-            this.txt_total.SelectionLength = 0;
-            this.txt_total.SelectionStart = 0;
-            this.txt_total.ShortcutsEnabled = true;
-            this.txt_total.Size = new System.Drawing.Size(244, 66);
-            this.txt_total.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_total.TabIndex = 46;
-            this.txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_total.TextMarginBottom = 0;
-            this.txt_total.TextMarginLeft = 3;
-            this.txt_total.TextMarginTop = 1;
-            this.txt_total.TextPlaceholder = "Total";
-            this.txt_total.UseSystemPasswordChar = false;
-            this.txt_total.WordWrap = true;
             // 
             // btnfactura
             // 
@@ -1467,6 +1390,84 @@
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
+            // txt_tot
+            // 
+            this.txt_tot.AcceptsReturn = false;
+            this.txt_tot.AcceptsTab = false;
+            this.txt_tot.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_tot.AnimationSpeed = 200;
+            this.txt_tot.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_tot.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_tot.AutoSizeHeight = true;
+            this.txt_tot.BackColor = System.Drawing.Color.White;
+            this.txt_tot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_tot.BackgroundImage")));
+            this.txt_tot.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_tot.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_tot.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_tot.BorderColorIdle = System.Drawing.Color.Red;
+            this.txt_tot.BorderRadius = 1;
+            this.txt_tot.BorderThickness = 3;
+            this.txt_tot.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_tot.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_tot.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tot.DefaultText = "";
+            this.txt_tot.FillColor = System.Drawing.Color.White;
+            this.txt_tot.ForeColor = System.Drawing.Color.Black;
+            this.txt_tot.HideSelection = true;
+            this.txt_tot.IconLeft = null;
+            this.txt_tot.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_tot.IconPadding = 10;
+            this.txt_tot.IconRight = null;
+            this.txt_tot.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_tot.Lines = new string[0];
+            this.txt_tot.Location = new System.Drawing.Point(7, 186);
+            this.txt_tot.MaxLength = 32767;
+            this.txt_tot.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_tot.Modified = false;
+            this.txt_tot.Multiline = false;
+            this.txt_tot.Name = "txt_tot";
+            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_tot.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_tot.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_tot.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.Red;
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.Color.Black;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_tot.OnIdleState = stateProperties32;
+            this.txt_tot.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_tot.PasswordChar = '\0';
+            this.txt_tot.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txt_tot.PlaceholderText = "Total";
+            this.txt_tot.ReadOnly = false;
+            this.txt_tot.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_tot.SelectedText = "";
+            this.txt_tot.SelectionLength = 0;
+            this.txt_tot.SelectionStart = 0;
+            this.txt_tot.ShortcutsEnabled = true;
+            this.txt_tot.Size = new System.Drawing.Size(231, 66);
+            this.txt_tot.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_tot.TabIndex = 49;
+            this.txt_tot.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_tot.TextMarginBottom = 0;
+            this.txt_tot.TextMarginLeft = 3;
+            this.txt_tot.TextMarginTop = 1;
+            this.txt_tot.TextPlaceholder = "Total";
+            this.txt_tot.UseSystemPasswordChar = false;
+            this.txt_tot.WordWrap = true;
+            this.txt_tot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tot_KeyPress);
+            // 
             // FacturarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1528,7 +1529,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private Bunifu.UI.WinForms.BunifuTextBox txt_total;
         private Bunifu.UI.WinForms.BunifuTextBox txt_nombre;
         private Bunifu.UI.WinForms.BunifuTextBox txt_dni;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox6;
@@ -1537,5 +1537,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox3;
         private Bunifu.UI.WinForms.BunifuTextBox txt_cod;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
+        private Bunifu.UI.WinForms.BunifuTextBox txt_tot;
     }
 }

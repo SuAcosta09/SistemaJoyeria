@@ -211,16 +211,6 @@
         7uNjagAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="cal_nacimiento.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADcSURBVFhH7ZbfCcIwEMYjbmCD4AI++uizAziMG+gEYpst
-        HEgwpbNEv3KWiKmeyUkQ8oPCd8ld/vQuaVWhcJp3K5I/gz1HM7uuST5pLqnxPQiMDr6TGl8oFAr/j9Hd
-        sq7aA5kDaEMfmfI45Sa1tjsyR4EPfMmUITSg0XZ71JcFHmhqHhBdhL9zU7Ubki/4fZy3xcLP67vJH/g+
-        IjURKjgujbZ7kumE8jxG0Pes3JRkFCg2kh/5xpdN9AKkfkqTUxBL9iLMfgxB1osIZL+KAQbk7Ao+4pP7
-        IK/8z7FSN7TreggZtY2iAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="txt_apellido.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAABCCAYAAACxfqjPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
